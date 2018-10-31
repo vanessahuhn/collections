@@ -97,7 +97,7 @@ public class Produit {
 
     @Override
     public String toString() {
-        return name + "  ||   prix = " + price + "  ||   en stock = " + stock;
+        return pid + ".  " + name + "  ||   prix = " + price + "  ||   en stock = " + stock;
     }
     
     

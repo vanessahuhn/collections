@@ -3,7 +3,6 @@
  */
 package exercices.TreeSet;
 
-import static exercices.HashSet.ComparerHashSet.compare;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.TreeSet;

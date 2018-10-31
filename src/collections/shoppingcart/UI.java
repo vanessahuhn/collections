@@ -140,7 +140,7 @@ public class UI {
     private void addProductToCart() {
 
         try {
-            cart.addProductToCartByPID(ch - 1);
+            cart.addProductToCartByPID(ch - 1, produits);
         } catch (IndexOutOfBoundsException exception) {
             System.out.println("Veuillez entrer un chiffre valide.");
         }
@@ -163,7 +163,11 @@ public class UI {
      */
     private void removeProductFromCart() {
 
-        cart.removeProductByPID(ch - 1);
+        try {
+        cart.removeProductByPID(ch - 1, produits);
+        } catch (IndexOutOfBoundsException exception) {
+            System.out.println("Veuillez entrer un chiffre valide.");
+        }
 
     }
 

@@ -30,10 +30,11 @@ class Cart {
      *Cette méthode permet d'ajouter un produit au panier à partir de son ID
      * @param pid
      */
-    public void addProductToCartByPID(int pid) {
+    public void addProductToCartByPID(int pid, Produits produits) {
         
-        addToCart(getProductByProductID(pid));
-        getProductByProductID(pid).setStock(getProductByProductID(pid).getStock() - 1);
+        addToCart(getProductByProductID(pid, produits));
+        getProductByProductID(pid, produits).setStock(getProductByProductID(pid, produits).getStock() - 1);
+        
     }
     
     /**
@@ -41,9 +42,8 @@ class Cart {
      * @param pid
      * @return
      */
-    private Produit getProductByProductID(int pid) {
+    private Produit getProductByProductID(int pid, Produits produits) {
         
-        Produits produits = new Produits();
         List<Produit> products = produits.getProducts();
         
         return products.get(pid);
@@ -61,8 +61,14 @@ class Cart {
      *Cette méthode permet de supprimer un produit du panier en utilisant son id.
      * @param pid
      */
-    public void removeProductByPID(int pid) {
+    public void removeProductByPID(int pid, Produits produits) {
+        
+        //l'item se remove en fonction de son id dans la liste, cela ne permet pas de remettre le stock
         cartItems.remove(pid);
+        System.out.println(getProductByProductID(pid, produits).getStock());
+        getProductByProductID(pid, produits).setStock(getProductByProductID(pid, produits).getStock() + 1);
+        System.out.println(getProductByProductID(pid, produits).getStock());
+        
     }
     
     /**
