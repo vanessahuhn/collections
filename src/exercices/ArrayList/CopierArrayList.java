@@ -5,7 +5,6 @@ package exercices.ArrayList;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 import java.util.ListIterator;
 
 /**
@@ -47,12 +46,12 @@ public class CopierArrayList {
         
         System.out.println("--------------------");
         
-        //(liste cible, liste origine)
+        //(liste destination, liste source)
         Collections.copy(liste2, liste);
         
         ListIterator<String> iterateur3 = liste2.listIterator();
         
-        System.out.println("Liste 2 clonée sur liste 1");
+        System.out.println("Liste 2 copiée à partir de liste 1");
         
         while (iterateur3.hasNext()) {
             System.out.println(iterateur3.next());

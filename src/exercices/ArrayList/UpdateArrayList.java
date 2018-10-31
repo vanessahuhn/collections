@@ -4,7 +4,6 @@
 package exercices.ArrayList;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.ListIterator;
 
 /**
@@ -24,14 +23,10 @@ public class UpdateArrayList {
         ListIterator<String> iterateur = liste.listIterator();
 
         while (iterateur.hasNext()) {
-            String couleur = (String) iterateur.next();
-            if (couleur == "jaune"){
-                int index = liste.indexOf(couleur);
-                liste.add(index, "vert");
-                liste.remove(index + 1);
-            }
-            System.out.println(couleur);
+            System.out.println(iterateur.next());
         }
+        
+        liste.set(2, "vert");
         
         ListIterator<String> iterateur2 = liste.listIterator();
 

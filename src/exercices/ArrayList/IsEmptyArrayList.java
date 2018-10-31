@@ -1,10 +1,9 @@
 /*
-18. Ecrire un programme Java pour tester une arraylist est vide ou non.
+18. Ecrire un programme Java pour tester si une arraylist est vide ou non.
  */
 package exercices.ArrayList;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.ListIterator;
 
 /**
@@ -13,7 +12,7 @@ import java.util.ListIterator;
  */
 public class IsEmptyArrayList {
     
-    public static void check(List<String> liste) {
+    public static void check(ArrayList<String> liste) {
         if (!liste.isEmpty())
             System.out.println("Liste pleine");
         else

@@ -32,8 +32,8 @@ public class ItererLinkedList {
 
         ListIterator<String> iterateur2 = liste.listIterator(liste.size());
 
-        while (iterateur2.hasNext()) {
-            System.out.println(iterateur2.next());
+        while (iterateur2.hasPrevious()) {
+            System.out.println(iterateur2.previous());
         }
 
     }
