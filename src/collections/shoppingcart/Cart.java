@@ -33,6 +33,7 @@ class Cart {
     public void addProductToCartByPID(int pid) {
         
         addToCart(getProductByProductID(pid));
+        getProductByProductID(pid).setStock(getProductByProductID(pid).getStock() - 1);
     }
     
     /**

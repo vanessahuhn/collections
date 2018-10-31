@@ -3,7 +3,6 @@
  */
 package exercices.HashSet;
 
-import static exercices.HashSet.ComparerConserverHashSet.compare;
 import java.util.HashSet;
 import java.util.Iterator;
 
@@ -28,9 +27,7 @@ public class DeleteHashSet {
         while (iterateur.hasNext()) {
             System.out.println(iterateur.next());
         }
-        
-        liste.clear();
-        
+                
         System.out.println("Liste supprimée");
         
         Iterator<String> iterateur2 = liste.iterator();

@@ -5,7 +5,6 @@
  */
 package collections.shoppingcart;
 
-import java.util.List;
 import java.util.ListIterator;
 import java.util.Scanner;
 
@@ -35,6 +34,7 @@ public class UI {
 
     Cart cart = new Cart();
     private int ch = 0; // choix utilisateur dans le scanner ?
+    Produits produits = new Produits();
 
     public UI() {
         menu();
@@ -72,7 +72,7 @@ public class UI {
                 menu();
             case 1:
                 ch = 1;
-                System.out.println("Ajouter au panier.Veuillez entrer l'id du produit :");
+                System.out.println("Ajouter au panier.Veuillez entrer l'id du produit\n1. chaussures    2. pantalon     3.veste    4. culotte");
                 getUserInput();
                 addProductToCart();
                 menu();
@@ -122,9 +122,7 @@ public class UI {
     /**
      * Cette méthode permet d'afficher la boutique (1 du start screen).
      */
-    private void displayStoreProducts() {
-
-        Produits produits = new Produits();
+    private void displayStoreProducts() {        
 
         ListIterator<Produit> iterateur = produits.getProducts().listIterator();
 
