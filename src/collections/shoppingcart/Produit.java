@@ -8,13 +8,19 @@ package collections.shoppingcart;
 import java.util.Objects;
 
 /**
- * Il s'agit d'une classe qui contient les propriétés du produit et fournit des setters et des getters pour celle-ci.
- * 
- * Créer la méthode equals () : pour comparer deux objets en fonction de leurs propriétés.
- * 
- * Créer la méthode hashCode () : est un hachage / numéro unique attaché à chaque objet chaque fois que l'objet est créé. Donc, chaque fois que deux objets sont comparés.
- * Leur code de hachage et leurs propriétés sont comparés. Si les deux (code de hachage et valeur de propriétés) sont identiques, l'objet est considéré comme égal, sinon différent.
- * Par conséquent, il est très important de faire un override pour les méthodes existantes hashcode () et equals () d'un objet.
+ * Il s'agit d'une classe qui contient les propriétés du produit et fournit des
+ * setters et des getters pour celle-ci.
+ *
+ * Créer la méthode equals () : pour comparer deux objets en fonction de leurs
+ * propriétés.
+ *
+ * Créer la méthode hashCode () : est un hachage / numéro unique attaché à
+ * chaque objet chaque fois que l'objet est créé. Donc, chaque fois que deux
+ * objets sont comparés. Leur code de hachage et leurs propriétés sont comparés.
+ * Si les deux (code de hachage et valeur de propriétés) sont identiques,
+ * l'objet est considéré comme égal, sinon différent. Par conséquent, il est
+ * très important de faire un override pour les méthodes existantes hashcode ()
+ * et equals () d'un objet.
  *
  * @author vanessa
  */
@@ -97,9 +103,7 @@ public class Produit {
 
     @Override
     public String toString() {
-        return pid + ".  " + name + "  ||   prix = " + price + "  ||   en stock = " + stock;
+        return name + "  ||   prix = " + price + "  ||   en stock = " + stock;
     }
-    
-    
 
 }

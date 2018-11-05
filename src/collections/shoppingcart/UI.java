@@ -93,6 +93,7 @@ public class UI {
             case 1:
                 ch = 1;
                 System.out.println("Retirer du panier");
+                cart.printCartItems();
                 getUserInput();
                 removeProductFromCart();
                 menu();
@@ -122,13 +123,15 @@ public class UI {
     /**
      * Cette méthode permet d'afficher la boutique (1 du start screen).
      */
-    private void displayStoreProducts() {        
+    private void displayStoreProducts() {
 
         ListIterator<Produit> iterateur = produits.getProducts().listIterator();
 
         while (iterateur.hasNext()) {
             System.out.println(iterateur.next());
         }
+        
+        System.out.println("------------");
 
         storeProductsMenu();
 
@@ -153,7 +156,6 @@ public class UI {
     private void showCart() {
 
         cart.printCartItems();
-
         cartMenu();
 
     }
@@ -164,7 +166,7 @@ public class UI {
     private void removeProductFromCart() {
 
         try {
-        cart.removeProductByPID(ch - 1, produits);
+            cart.removeProductByPID(ch - 1, produits);
         } catch (IndexOutOfBoundsException exception) {
             System.out.println("Veuillez entrer un chiffre valide.");
         }
